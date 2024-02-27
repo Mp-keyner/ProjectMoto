@@ -12,8 +12,8 @@ const theme = createTheme({
       contrastText: "#fff",
     },
     tertiary: {
-      main: "#232323",
-      contrastText: "#fff",
+      main: "#ffff",
+      contrastText: "#232323",
     },
     error: {
       main: "#f44336", // Color de error
