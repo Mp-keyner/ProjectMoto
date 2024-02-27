@@ -4,16 +4,16 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#2c2a29",
-      Light: "#565453",
-      Dark: "#1E1D1C",
-      contrastText: "#fff",
+      main: "#fff",
+      contrastText: "#000",
     },
     secondary: {
-      main: "#fdda24", // Color principal
-      Light: "#FDE14F",
-      Dark: "#FDE14F",
-      contrastText: "#2c2a29",
+      main: "#ed1744",
+      contrastText: "#fff",
+    },
+    tertiary: {
+      main: "#232323",
+      contrastText: "#fff",
     },
     error: {
       main: "#f44336", // Color de error
