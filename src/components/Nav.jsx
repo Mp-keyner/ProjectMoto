@@ -1,6 +1,7 @@
 import {
   AppBar,
   Box,
+  Button,
   IconButton,
   Stack,
   Toolbar,
@@ -8,6 +9,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ImgLogo from "../assets/yamaha.svg";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Nav = () => {
   return (
@@ -38,7 +40,7 @@ const Nav = () => {
               News
             </Typography>
           </Stack> */}
-          <Box component="img" src={ImgLogo} width="9pc" />
+          <Box component="img" src={ImgLogo} width="9pc" draggable={false} />
           {/* <IconButton
             size="large"
             edge="start"
@@ -48,8 +50,33 @@ const Nav = () => {
           >
             <MenuIcon />
           </IconButton> */}
-          <Stack>
-            <Typography color="primary">heejej</Typography>
+          <Stack direction="row" alignItems="center" gap="2pc">
+            <Stack direction="row" alignItems="center" gap="2pc">
+              <Button variant="text">
+                <Typography color="primary">MOTOCICLETAS</Typography>
+              </Button>
+              <Button variant="text">
+                <Typography color="primary">FINANCIACIÓN</Typography>
+              </Button>
+              <Button variant="text">
+                <Typography color="primary">SERVICIOS</Typography>
+              </Button>
+              <Button variant="text">
+                <Typography color="primary">NOTICIAS</Typography>
+              </Button>
+              <Button variant="text">
+                <Typography color="primary">SERVICIO AL CLIENTE</Typography>
+              </Button>
+            </Stack>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <SearchIcon color="primary" fontSize="3pc" />
+            </IconButton>
           </Stack>
         </Toolbar>
       </AppBar>
