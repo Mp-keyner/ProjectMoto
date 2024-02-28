@@ -1,4 +1,7 @@
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   AppBar,
   Box,
   Button,
@@ -10,6 +13,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import ImgLogo from "../assets/yamaha.svg";
 import SearchIcon from "@mui/icons-material/Search";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Nav = () => {
   return (
@@ -51,21 +55,79 @@ const Nav = () => {
             <MenuIcon />
           </IconButton> */}
           <Stack direction="row" alignItems="center" gap="2pc">
-            <Stack direction="row" alignItems="center" gap="2pc">
+            <Stack
+              direction="row"
+              alignItems="center"
+              gap="2pc"
+              position="relative"
+              // bgcolor="red"
+            >
+              <Accordion
+                sx={{
+                  width: "10pc",
+                  position: "absolute",
+                  top: "0",
+                  left: "-10pc",
+                  height: "2.5pc",
+                  boxShadow: "none",
+                  background: "white",
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  sx={{
+                    // background: "blue",
+                    height: "2pc",
+                  }}
+                >
+                  <Typography
+                    color="primary"
+                    variant="p"
+                    sx={{
+                      // background: "orange",
+                      height: "2pc",
+                    }}
+                  >
+                    MOTOCICLETAS
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Button variant="text">
+                    <Typography color="primary" variant="p">
+                      FINANCIACIÓN
+                    </Typography>
+                  </Button>
+                  <Button variant="text">
+                    <Typography color="primary" variant="p">
+                      FINANCIACIÓN
+                    </Typography>
+                  </Button>
+                  <Button variant="text">
+                    <Typography color="primary" variant="p">
+                      FINANCIACIÓN
+                    </Typography>
+                  </Button>
+                </AccordionDetails>
+              </Accordion>
               <Button variant="text">
-                <Typography color="primary">MOTOCICLETAS</Typography>
+                <Typography color="primary" variant="p">
+                  FINANCIACIÓN
+                </Typography>
               </Button>
               <Button variant="text">
-                <Typography color="primary">FINANCIACIÓN</Typography>
+                <Typography color="primary" variant="p">
+                  SERVICIOS
+                </Typography>
               </Button>
               <Button variant="text">
-                <Typography color="primary">SERVICIOS</Typography>
+                <Typography color="primary" variant="p">
+                  NOTICIAS
+                </Typography>
               </Button>
               <Button variant="text">
-                <Typography color="primary">NOTICIAS</Typography>
-              </Button>
-              <Button variant="text">
-                <Typography color="primary">SERVICIO AL CLIENTE</Typography>
+                <Typography color="primary" variant="p">
+                  SERVICIO AL CLIENTE
+                </Typography>
               </Button>
             </Stack>
             <IconButton
